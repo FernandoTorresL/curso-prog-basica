@@ -39,7 +39,9 @@ function dibujar()
    }
    if (vaca.cargaOK)
    {
-      papel.drawImage(vaca.imagen, 100, 100);
+      var x = aleatorio(0, 420);
+      var y = aleatorio(0, 420);
+      papel.drawImage(vaca.imagen, x, y);
    }
 }
 
