@@ -11,6 +11,8 @@ var vaca = {
    cargaOK: false
 };
 
+var cantidad = aleatorio(5, 25);
+
 fondo.imagen = new Image();
 fondo.imagen.src = fondo.url;
 fondo.imagen.addEventListener("load", cargarFondo);
@@ -39,9 +41,16 @@ function dibujar()
    }
    if (vaca.cargaOK)
    {
-      var x = aleatorio(0, 420);
-      var y = aleatorio(0, 420);
-      papel.drawImage(vaca.imagen, x, y);
+      console.log(cantidad);
+      for (var v = 0; v < cantidad; v++)
+      {
+         var x = aleatorio(0, 5);
+         var y = aleatorio(0, 5);
+         var x = x * 80;
+         var y = y * 80;
+         papel.drawImage(vaca.imagen, x, y);
+      }
+
    }
 }
 
